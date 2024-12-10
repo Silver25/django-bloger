@@ -1,6 +1,85 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
+# Moja Testera
+Mjesto za testiranje Git koda i opcija sustava online ili lokalno s VS Code
 
+## Purpose
+
+## Description [Interactive Responsive Website]
+
+## UX Design
+Proposed by Jesse James Garrett, this process is represented as five levels of activity called planes.  
+These planes and their concerns are as follows.
+
+### Target audience
+
+### First Time Visitor Goals
+
+### Returning Visitor Goals
+
+### User Stories
+- MoSCow prioritization [for PBIs - Product Backlog Items]:
+- Must Have / Should Have / Could Have / Won’t Have (GitHub Issues)
+- create user story template file [user-story.md]
+- git pull to update preview on Gitpod VS GUI
+- write these lines as reminder
+
+### The strategy plane: 
+What are you aiming to achieve in the first place and for whom?
+
+### The scope plane: 
+Which features, based on information from the strategy plane, do you want to include in your design?
+What's on the table for a production release and what's not, at least for now?
+
+### The structure plane: 
+How is the information structured and how is it logically grouped?
+
+### The skeleton plane: 
+How will our information be represented, and how will the user navigate to the information and the features?
+
+### The surface plane: 
+What will the finished product look like?
+What colors, typography, and design elements will we use?
+
+### Wireframes
+
+### Colour Scheme
+
+### Typography
+
+## Features
+
+### Future Features
+
+## Testing
+
+### Manual Testing
+
+### Validator Testing
+
+### Bugs and Issues
+
+## Deployment
+Heroku deployment
+- Front page -> Create new app
+- App name + Europe -> Create app
+- Dashboard -> Settings tab
+- _Config Vars_ called `PORT`. Set this to `8000`
+- Config Vars -> Reveal Config Vars -> CREDS + creds.json code
+- Buildpacks -> Add buildpack -> Python + Node.js
+- Deploy tab -> Deployment method -> GitHub -> Connect to GitHub -> Authorize Heroku
+  -> Popup window -> Sign in to GitHub -> Search for gitHub project
+- Manual deploy -> Deploy a GitHub branch -> Deploy Branch button
+- Receive code from GitHub -> Build main ...
+- Your app was successfully deployed. -> View button
+
+## Technologies
+
+## Credits [Acknowledgments]
+
+Me, Myself and I
+---
+---
 
 ## Gitpod Reminders
 
