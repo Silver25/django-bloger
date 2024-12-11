@@ -117,4 +117,8 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 - Terminal: pip3 install Django==5.1.4
 - Terminal: pip3 freeze --local > requirements.txt
-- Terminal: django-admin startproject my_project .
+- Terminal: django-admin startproject my_project . [ creating the Django project ]
+- Terminal: python3 manage.py runserver  ![Issue with runing server](image01.png)
+- [ for security reasons, Django doesn't recognise the hostname - the server name ]
+- Solution: hostname link place in my_project/settings.py file - ALLOWED_HOSTS
+- python3 manage.py startapp hello_world  [ creating the app ]
