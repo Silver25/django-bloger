@@ -1,7 +1,6 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-# Moja Testera
-Mjesto za testiranje Git koda i opcija sustava online ili lokalno s VS Code
+# Django Bloger
 
 ## Purpose
 
@@ -83,19 +82,11 @@ Me, Myself and I
 
 ## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+To run a frontend (HTML, CSS, Javascript only) application in Gitpod: `python3 -m http.server`
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+To run a backend Python file, type `python3 app.py`.
 
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
 
 By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
@@ -121,3 +112,8 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 - in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
   - replace all `<angle-bracket>` keys with your own data
 - enter password _(will not echo **\*\*\*\*** on screen)_
+
+## Release History
+
+- Terminal: pip3 install Django==5.1.4
+- Terminal: pip3 freeze --local > requirements.txt
