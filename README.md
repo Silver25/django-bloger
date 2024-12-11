@@ -117,3 +117,4 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 - Terminal: pip3 install Django==5.1.4
 - Terminal: pip3 freeze --local > requirements.txt
+- Terminal: django-admin startproject my_project .
