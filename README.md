@@ -121,7 +121,8 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 - Terminal: python3 manage.py runserver  ![Issue with runing server](image01.png)
 - [ for security reasons, Django doesn't recognise the hostname - the server name ]
 - Solution: hostname link place in my_project/settings.py file - ALLOWED_HOSTS
-- python3 manage.py startapp hello_world  [ creating the app 'hello_world ]
+- Terminal: python3 manage.py startapp hello_world  [ creating the app 'hello_world ]
 - Creating Views in hello_world/views.py
 - Creating URLs in my_project/urls.py
 - Adding the app to the settings.py file to connect the app to the project  [ INSTALLED_APPS list ]
+- Terminal: test/run app in browser  [ ![ testing app in browser ](image02.png) ]
