@@ -126,3 +126,7 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 - Creating URLs in my_project/urls.py
 - Adding the app to the settings.py file to connect the app to the project  [ INSTALLED_APPS list ]
 - Terminal: test/run app in browser  [ ![ testing app in browser ](image02.png) ]
+- Terminal: python3 manage.py startapp about  [ creating the app 'about' ]
+- Creating all necessary steps to activate and run app [ settings, urls, views ]
+- Test/run app in browser  ![applying app name in address bar](image03.png)
+- App can be seen if name of the app is applied on the end of the URL in address bar
