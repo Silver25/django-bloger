@@ -134,3 +134,5 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 - Install a production-ready webserver for Heroku, gunicorn==20.1.0, add to requirements file
 - Create Procfile, with declaration command to execute Django project
 - Add herokuapp.com to the ALLOWED_HOSTS list
+- Can't activate Heroku EcoDynos, NO such option ![Resources Tab without EcoDynos button](image04.png)
+- After few minutes, refresh/change tab and was activated ![EcoDynos displayed](image05.png)
