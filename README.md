@@ -131,8 +131,12 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 - Test/run app in browser  ![applying app name in address bar](image03.png)
 - App can be seen if name of the app is applied on the end of the URL in address bar
 - Create new Heroku app, djangobloger
-- Install a production-ready webserver for Heroku, gunicorn==20.1.0, add to requirements file
+- Terminal: install a production-ready webserver for Heroku: "pip3 install gunicorn~=20.1"
+- [ or for the last version: python -m pip install gunicorn]
+- Terminal: pip3 freeze --local > requirements.txt  [add to requirements file]
 - Create Procfile, with declaration command to execute Django project
 - Add herokuapp.com to the ALLOWED_HOSTS list
 - Can't activate Heroku EcoDynos, NO such option ![Resources Tab without EcoDynos button](image04.png)
 - After few minutes, refresh/change tab and was activated ![EcoDynos displayed](image05.png)
+- Terminal: pip3 install whitenoise~=6.5.0  [Install Whitenoise package]
+- Terminal: pip3 freeze --local > requirements.txt  [update requirements file]
