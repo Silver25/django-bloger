@@ -140,3 +140,4 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 - After few minutes, refresh/change tab and was activated ![EcoDynos displayed](image05.png)
 - Terminal: pip3 install whitenoise~=6.5.0  [Install Whitenoise package]
 - Terminal: pip3 freeze --local > requirements.txt  [update requirements file]
+- GitHub, create new project [User stories] with issues as a part of my Repo
