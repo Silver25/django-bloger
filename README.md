@@ -118,6 +118,7 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 - Terminal: pip3 install Django==5.1.4
 - Terminal: pip3 freeze --local > requirements.txt
 - Terminal: django-admin startproject my_project . [ creating the Django project ]
+- === name of the project in blog walkthrough: **'codestar'** ===
 - Terminal: python3 manage.py runserver  ![Issue with runing server](image01.png)
 - [ for security reasons, Django doesn't recognise the hostname - the server name ]
 - Solution: hostname link place in my_project/settings.py file - ALLOWED_HOSTS
@@ -125,7 +126,7 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 - Creating Views in hello_world/views.py
 - Creating URLs in my_project/urls.py
 - Adding the app to the settings.py file to connect the app to the project  [ INSTALLED_APPS list ]
-- Terminal: test/run app in browser  [ ![testing app in browser](image02.png) ]
+- Terminal: test/run app in browser  ![testing app in browser](image02.png)
 - Terminal: python3 manage.py startapp about  [ creating the app 'about' ]
 - Creating all necessary steps to activate and run app [ settings, urls, views ]
 - Test/run app in browser  ![applying app name in address bar](image03.png)
@@ -133,11 +134,18 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 - Create new Heroku app, djangobloger
 - Terminal: install a production-ready webserver for Heroku: "pip3 install gunicorn~=20.1"
 - [ or for the last version: python -m pip install gunicorn]
-- Terminal: pip3 freeze --local > requirements.txt  [add to requirements file]
+- Terminal: pip3 freeze --local > requirements.txt  [ add to requirements file ]
 - Create Procfile, with declaration command to execute Django project
 - Add herokuapp.com to the ALLOWED_HOSTS list
 - Can't activate Heroku EcoDynos, NO such option ![Resources Tab without EcoDynos button](image04.png)
 - After few minutes, refresh/change tab and was activated ![EcoDynos displayed](image05.png)
-- Terminal: pip3 install whitenoise~=6.5.0  [Install Whitenoise package]
-- Terminal: pip3 freeze --local > requirements.txt  [update requirements file]
+- Terminal: pip3 install whitenoise~=6.5.0  [ Install Whitenoise package ]
+- Terminal: pip3 freeze --local > requirements.txt  [ update requirements file ]
 - GitHub, create new project [User stories] with issues as a part of my Repo
+- Start Blog walkthrough with new app = blog
+- Terminal: python manage.py startapp blog  [ creating the app 'blog' ]
+- Add the new app to the list of installed apps in the settings.py file
+- Add an import for HttpResponse in the blog/views.py file
+- Add a function to return the text string "Hello, Blog!" in the blog/views.py file
+- Import the appropriate views file and add the new path ‘blog/’ in my_project/urls
+- Terminal: test/run app in browser
