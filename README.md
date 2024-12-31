@@ -149,3 +149,9 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 - Add a function to return the text string "Hello, Blog!" in the blog/views.py file
 - Import the appropriate views file and add the new path ‘blog/’ in my_project/urls
 - Terminal: test/run app in browser
+- Creating the Database [ PostgreSQL ]
+- Connecting database to code with env.py file, hold db URL
+- Install packages psycopg2 [ driver ] and dj-database-url for connection with db
+- Import the appropriate packages in project/settings.py
+- Comment out local sqlite3 database connection [ created as default on setup ]
+![Installed packages and migration to connect database](image06.png)
