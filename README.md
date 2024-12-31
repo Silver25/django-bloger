@@ -155,3 +155,4 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 - Import the appropriate packages in project/settings.py
 - Comment out local sqlite3 database connection [ created as default on setup ]
 ![Installed packages and migration to connect database](image06.png)
+- Terminal: python3 manage.py createsuperuser
