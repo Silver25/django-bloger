@@ -156,3 +156,7 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 - Comment out local sqlite3 database connection [ created as default on setup ]
 ![Installed packages and migration to connect database](image06.png)
 - Terminal: python3 manage.py createsuperuser
+- Create new class 'Post' with required dependencies in 'blog' app
+![New class/model Post](image07.png)
+- Start the Django server, append /admin to the URL
+![Start Django Admin section](image08.png)
