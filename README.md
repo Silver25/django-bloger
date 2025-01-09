@@ -82,16 +82,13 @@ Me, Myself and I
 
 ## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod: `python3 -m http.server`
+To run a frontend (HTML, CSS, Javascript only) application in Gitpod: **python3 -m http.server**
 
+To run a backend Python file, type **python3 app.py**.
 
-To run a backend Python file, type `python3 app.py`.
-
-
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+To run Django server, type: **python3 manage.py runserver**
 
 To log into the Heroku toolbelt CLI:
-
 1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
 2. Scroll down to the *API Key* and click *Reveal*
 3. Copy the key
