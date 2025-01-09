@@ -116,17 +116,17 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 - Terminal: pip3 freeze --local > requirements.txt
 - Terminal: django-admin startproject my_project . [ creating the Django project ]
 - === name of the project in blog walkthrough: **'codestar'** ===
-- Terminal: python3 manage.py runserver  ![Issue with runing server](image01.png)
+- Terminal: python3 manage.py runserver  ![Issue with runing server](readme-assets/image01.png)
 - [ for security reasons, Django doesn't recognise the hostname - the server name ]
 - Solution: hostname link place in my_project/settings.py file - ALLOWED_HOSTS
 - Terminal: python manage.py startapp hello_world  [ creating the app 'hello_world ]
 - Creating Views in hello_world/views.py
 - Creating URLs in my_project/urls.py
 - Adding the app to the settings.py file to connect the app to the project  [ INSTALLED_APPS list ]
-- Terminal: test/run app in browser  ![testing app in browser](image02.png)
+- Terminal: test/run app in browser  ![testing app in browser](readme-assets/image02.png)
 - Terminal: python3 manage.py startapp about  [ creating the app 'about' ]
 - Creating all necessary steps to activate and run app [ settings, urls, views ]
-- Test/run app in browser  ![applying app name in address bar](image03.png)
+- Test/run app in browser  ![applying app name in address bar](readme-assets/image03.png)
 - App can be seen if name of the app is applied on the end of the URL in address bar
 - Create new Heroku app, djangobloger
 - Terminal: install a production-ready webserver for Heroku: "pip3 install gunicorn~=20.1"
@@ -134,8 +134,8 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 - Terminal: pip3 freeze --local > requirements.txt  [ add to requirements file ]
 - Create Procfile, with declaration command to execute Django project
 - Add herokuapp.com to the ALLOWED_HOSTS list
-- Can't activate Heroku EcoDynos, NO such option ![Resources Tab without EcoDynos button](image04.png)
-- After few minutes, refresh/change tab and was activated ![EcoDynos displayed](image05.png)
+- Can't activate Heroku EcoDynos, NO such option ![Resources Tab without EcoDynos button](readme-assets/image04.png)
+- After few minutes, refresh/change tab and was activated ![EcoDynos displayed](readme-assets/image05.png)
 - Terminal: pip3 install whitenoise~=6.5.0  [ Install Whitenoise package ]
 - Terminal: pip3 freeze --local > requirements.txt  [ update requirements file ]
 - GitHub, create new project [User stories] with issues as a part of my Repo
@@ -151,9 +151,15 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 - Install packages psycopg2 [ driver ] and dj-database-url for connection with db
 - Import the appropriate packages in project/settings.py
 - Comment out local sqlite3 database connection [ created as default on setup ]
-![Installed packages and migration to connect database](image06.png)
+![Installed packages and migration to connect database](readme-assets/image06.png)
 - Terminal: python3 manage.py createsuperuser
 - Create new class 'Post' with required dependencies in 'blog' app
-![New class/model Post](image07.png)
+![New class/model Post](readme-assets/image07.png)
 - Start the Django server, append /admin to the URL
-![Start Django Admin section](image08.png)
+![Start Django Admin section](readme-assets/image08.png)
+- Created new Post in Django Admin - using +Add button
+![Django Admin - New Post created](readme-assets/image09.png)
+- Created new User in Django Admin - using +Add button
+![Django Admin - New User added](readme-assets/image10.png)
+- Created new model class 'Comment' with all dependencies in 'blog' app [ how model field names looks in Django!! ]
+![Django Admin - Comment window example](readme-assets/image11.png)
