@@ -87,6 +87,7 @@ To run a frontend (HTML, CSS, Javascript only) application in Gitpod: **python3 
 To run a backend Python file, type **python3 app.py**.
 
 To run Django server, type: **python3 manage.py runserver**
+Dev server opens: https://8000-silver25-djangobloger-5btwzguyq09.ws.codeinstitute-ide.net/
 
 To log into the Heroku toolbelt CLI:
 1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
@@ -163,3 +164,5 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 ![Django Admin - New User added](readme-assets/image10.png)
 - Created new model class 'Comment' with all dependencies in 'blog' app [ how model field names looks in Django!! ]
 ![Django Admin - Comment window example](readme-assets/image11.png)
+- Build homepage with Django generic views and remove old about and blog urls
+![Posts list with generic views](readme-assets/image12.png)
