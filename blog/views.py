@@ -8,5 +8,6 @@ from .models import Post
 #     return HttpResponse("Hello, Blog!")
 class PostList(generic.ListView):
     # model = Post - remove couse redundant by the queryset
-    queryset = Post.objects.all()
+    # use all of the records from the Post model & display in descending order
+    queryset = Post.objects.all().order_by("-created_on")
     template_name = "post_list.html"
