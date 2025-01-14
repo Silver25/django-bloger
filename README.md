@@ -146,3 +146,15 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 ![Django Admin - Comment window example](readme-assets/image11.png)
 - Build homepage with Django generic views and remove old about and blog urls
 ![Posts list with generic views](readme-assets/image12.png)
+- Terminal: pip3 install django-summernote~=0.8.20.0 [Summernote, a robust text editor for Admin]
+- Add django-summernote~=0.8.20.0 to requirements.txt file
+- codestar/settings.py -> append 'django_summernote', to the INSTALLED_APPS
+- codestar/urls.py -> path('summernote/', include('django_summernote.urls')), to urlpatterns =
+- blog/admin.py -> import the class SummernoteModelAdmin
+- blog/admin.py -> add a class named PostAdmin
+- blog/admin.py -> add an @admin.register(Post) decorator above the PostAdmin class
+- blog/admin.py -> delete the existing Post model registration
+- Apply the migrations for the django_summernote app
+- Terminal: python3 manage.py makemigrations
+- Terminal: python3 manage.py migrate
+- Run the Django server and open Admin area
