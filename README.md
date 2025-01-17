@@ -163,4 +163,9 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - Adding more posts with 'fixtures' - Set of pre-written data for a database in the same format
 - Blog app - create new folder 'fixtures' and inside file 'posts.json', paste source code
 - Terminal: load the data to the database table with 'python3 manage.py loaddata posts'
-- Add blog/fixtures/ to the .gitignore file
+- Add blog/fixtures/ to the .gitignore file  
+
+- The base template and homepage
+- codestar/settings.py create a TEMPLATES_DIR constant
+- Add newly created TEMPLATES_DIR constant to the list of 'DIRS'
+- Add a new top-level 'templates' directory and inside new 'base.html' file, filled with code
