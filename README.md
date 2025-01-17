@@ -169,3 +169,4 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - codestar/settings.py create a TEMPLATES_DIR constant
 - Add newly created TEMPLATES_DIR constant to the list of 'DIRS'
 - Add a new top-level 'templates' directory and inside new 'base.html' file, filled with code
+- Add a new index.html file to existing app-level blog/templates/blog directory
