@@ -173,3 +173,6 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - blog/views.py -> replace the existing template_name with the new template_name
 - Delete the redundant 'post_list.html' template, as is replaced with the new 'index.html' template
 - Create a top-level 'static' directory with a 'css' directory within it, and a style.css file
+- codestar/settings.py -> and build a path for our subdirectory static
+- base.html -> and load the static directory with {% load static %}
+- base.html -> add a link for custom CSS file
