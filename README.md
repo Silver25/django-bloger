@@ -166,7 +166,9 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - Add blog/fixtures/ to the .gitignore file  
 
 - The base template and homepage
-- codestar/settings.py create a TEMPLATES_DIR constant
+- codestar/settings.py -> create a TEMPLATES_DIR constant
 - Add newly created TEMPLATES_DIR constant to the list of 'DIRS'
 - Add a new top-level 'templates' directory and inside new 'base.html' file, filled with code
 - Add a new index.html file to existing app-level blog/templates/blog directory
+- blog/views.py -> replace the existing template_name with the new template_name
+- Delete the redundant 'post_list.html' template, as is replaced with the new 'index.html' template
