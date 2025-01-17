@@ -176,3 +176,4 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - codestar/settings.py -> and build a path for our subdirectory static
 - base.html -> and load the static directory with {% load static %}
 - base.html -> add a link for custom CSS file
+![Apply new custom CSS for posts](image.png)
