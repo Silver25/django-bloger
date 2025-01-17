@@ -172,3 +172,4 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - Add a new index.html file to existing app-level blog/templates/blog directory
 - blog/views.py -> replace the existing template_name with the new template_name
 - Delete the redundant 'post_list.html' template, as is replaced with the new 'index.html' template
+- Create a top-level 'static' directory with a 'css' directory within it, and a style.css file
