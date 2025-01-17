@@ -158,3 +158,9 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - Terminal: python3 manage.py makemigrations
 - Terminal: python3 manage.py migrate
 - Run the Django server and open Admin area
+
+### 17/01 actions
+- Adding more posts with 'fixtures' - Set of pre-written data for a database in the same format
+- Blog app - create new folder 'fixtures' and inside file 'posts.json', paste source code
+- Terminal: load the data to the database table with 'python3 manage.py loaddata posts'
+- Add blog/fixtures/ to the .gitignore file
