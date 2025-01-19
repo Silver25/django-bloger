@@ -177,3 +177,12 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 
 ### 19/01 work
 - Apply new {% block copyright %} to base.html and index.html
+- Add variable excerpt in index.html and tag URL in base.html files
+- Add tag if statement for PREV post list button in index.html
+- Terminal: pip3 install whitenoise~=6.5.0
+- Add 'whitenoise.middleware.WhiteNoiseMiddleware', to settings.py
+- **Create a staticfiles directory and collect the static files:**
+- settings.py -> STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+- Terminal: python3 manage.py collectstatic  [ command create a staticfiles dir and fill it with static files ]
+- Terminal: python3 -V  [ check the IDE Python version ]
+- Add a runtime.txt file to projects root directory, ad line: 'python-3.12' [ IDE supported Python version ]
