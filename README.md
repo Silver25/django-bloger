@@ -158,13 +158,10 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - Terminal: python3 manage.py makemigrations
 - Terminal: python3 manage.py migrate
 - Run the Django server and open Admin area
-
-### 17/01 actions
 - Adding more posts with 'fixtures' - Set of pre-written data for a database in the same format
 - Blog app - create new folder 'fixtures' and inside file 'posts.json', paste source code
 - Terminal: load the data to the database table with 'python3 manage.py loaddata posts'
 - Add blog/fixtures/ to the .gitignore file  
-
 - The base template and homepage
 - codestar/settings.py -> create a TEMPLATES_DIR constant
 - Add newly created TEMPLATES_DIR constant to the list of 'DIRS'
@@ -176,4 +173,7 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - codestar/settings.py -> and build a path for our subdirectory static
 - base.html -> and load the static directory with {% load static %}
 - base.html -> add a link for custom CSS file
-![Apply new custom CSS for posts](image.png)
+![Apply new custom CSS for posts](readme-assets/image13.png)
+
+### 19/01 work
+- Apply new {% block copyright %} to base.html and index.html
