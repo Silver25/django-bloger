@@ -185,4 +185,5 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - settings.py -> STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 - Terminal: python3 manage.py collectstatic  [ command create a staticfiles dir and fill it with static files ]
 - Terminal: python3 -V  [ check the IDE Python version ]
-- Add a runtime.txt file to projects root directory, ad line: 'python-3.12' [ IDE supported Python version ]
+- Add a runtime.txt file to projects root directory, add line: 'python-3.12' [ IDE supported Python version ]
+- Heroku dashboard -> Settings tab -> Remove the DISABLE_COLLECTSTATIC key/value pair
