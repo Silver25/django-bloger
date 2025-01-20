@@ -193,6 +193,9 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - index.html -> template's for-loop [ to display posts ] update the anchor element
 - blog/views.py -> add a 'post_detail' function-based view
 - blog/views.py -> add the 'get_object_or_404' method to the import
-- Create an images directory in the existing static directory and upload the image for the post header
+- Create an 'images' directory in the existing static directory and upload the image for the post header
 - Create a new 'post_detail.html' file in the 'blog/templates/blog' directory & fill with the code
 - Terminal: python3 manage.py collectstatic [ collect the new static files to the staticfiles directory ]
+
+- **python3 manage.py runserver**
+- **DEBUG: False, git add, commit and push**
