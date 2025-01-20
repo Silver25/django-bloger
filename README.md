@@ -76,7 +76,9 @@ Heroku deployment
 
 ## Credits [Acknowledgments]
 
-Me, Myself and I
+Images and photographs created by Me, Myself and I
+Font style created by Google Fonts [https://fonts.google.com/]
+Footer icons provided by Font Awesome [https://fontawesome.com/icons]
 ---
 ---
 
@@ -101,20 +103,20 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - [ for security reasons, Django doesn't recognise the hostname - the server name ]
 - Solution: hostname link place in my_project/settings.py file - ALLOWED_HOSTS
 - Terminal: python manage.py startapp hello_world  [ creating the app 'hello_world ]
-- Creating Views in hello_world/views.py
-- Creating URLs in my_project/urls.py
-- Adding the app to the settings.py file to connect the app to the project  [ INSTALLED_APPS list ]
+- hello_world/views.py -> creating Views
+- my_project/urls.py -> creating URLs
+- settings.py -> adding the app to the file to connect the app to the project  [ INSTALLED_APPS list ]
 - Terminal: test/run app in browser  ![testing app in browser](readme-assets/image02.png)
 - Terminal: python3 manage.py startapp about  [ creating the app 'about' ]
 - Creating all necessary steps to activate and run app [ settings, urls, views ]
 - Test/run app in browser  ![applying app name in address bar](readme-assets/image03.png)
 - App can be seen if name of the app is applied on the end of the URL in address bar
-- Create new Heroku app, djangobloger
+- Create new Heroku app, 'djangobloger'
 - Terminal: install a production-ready webserver for Heroku: "pip3 install gunicorn~=20.1"
 - [ or for the last version: python -m pip install gunicorn]
 - Terminal: pip3 freeze --local > requirements.txt  [ add to requirements file ]
-- Create Procfile, with declaration command to execute Django project
-- Add herokuapp.com to the ALLOWED_HOSTS list
+- Create 'Procfile', with declaration command to execute Django project
+- settings.py -> add herokuapp.com to the ALLOWED_HOSTS list
 - Can't activate Heroku EcoDynos, NO such option ![Resources Tab without EcoDynos button](readme-assets/image04.png)
 - After few minutes, refresh/change tab and was activated ![EcoDynos displayed](readme-assets/image05.png)
 - Terminal: pip3 install whitenoise~=6.5.0  [ Install Whitenoise package ]
@@ -122,15 +124,15 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - GitHub, create new project [User stories] with issues as a part of my Repo
 - Start Blog walkthrough with new app = blog
 - Terminal: python manage.py startapp blog  [ creating the app 'blog' ]
-- Add the new app to the list of installed apps in the settings.py file
-- Add an import for HttpResponse in the blog/views.py file
-- Add a function to return the text string "Hello, Blog!" in the blog/views.py file
-- Import the appropriate views file and add the new path ‘blog/’ in my_project/urls
+- settings.py -> add the new app to the list of installed apps in the file
+- blog/views.py -> add an import for HttpResponse in the file
+- blog/views.py -> add a function to return the text string "Hello, Blog!" in the file
+- my_project/urls.py -> import the appropriate views file and add the new path ‘blog/’
 - Terminal: test/run app in browser
-- Creating the Database [ PostgreSQL ]
-- Connecting database to code with env.py file, hold db URL
+- Creating the Database [ PostgreSQL ] with CI manager
+- env.py -> connecting database to code with file, hold db URL
 - Install packages psycopg2 [ driver ] and dj-database-url for connection with db
-- Import the appropriate packages in project/settings.py
+- project/settings.py -> import the appropriate packages
 - Comment out local sqlite3 database connection [ created as default on setup ]
 ![Installed packages and migration to connect database](readme-assets/image06.png)
 - Terminal: python3 manage.py createsuperuser
@@ -174,16 +176,23 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - base.html -> and load the static directory with {% load static %}
 - base.html -> add a link for custom CSS file
 ![Apply new custom CSS for posts](readme-assets/image13.png)
-
-### 19/01 work
 - Apply new {% block copyright %} to base.html and index.html
 - Add variable excerpt in index.html and tag URL in base.html files
 - Add tag if statement for PREV post list button in index.html
 - Terminal: pip3 install whitenoise~=6.5.0
 - Add 'whitenoise.middleware.WhiteNoiseMiddleware', to settings.py
-- **Create a staticfiles directory and collect the static files:**
+- Create a staticfiles directory and collect the static files:
 - settings.py -> STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 - Terminal: python3 manage.py collectstatic  [ command create a staticfiles dir and fill it with static files ]
 - Terminal: python3 -V  [ check the IDE Python version ]
 - Add a runtime.txt file to projects root directory, add line: 'python-3.12' [ IDE supported Python version ]
 - Heroku dashboard -> Settings tab -> Remove the DISABLE_COLLECTSTATIC key/value pair
+
+### 20-01 daily tasks
+- blog/urls.py -> new path for post_detail
+- index.html -> template's for-loop [ to display posts ] update the anchor element
+- blog/views.py -> add a 'post_detail' function-based view
+- blog/views.py -> add the 'get_object_or_404' method to the import
+- Create an images directory in the existing static directory and upload the image for the post header
+- Create a new 'post_detail.html' file in the 'blog/templates/blog' directory & fill with the code
+- Terminal: python3 manage.py collectstatic [ collect the new static files to the staticfiles directory ]
