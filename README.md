@@ -74,11 +74,19 @@ Heroku deployment
 
 ## Technologies
 
+- Python
+- Gitpod
+- Github
+- Google Apps
+
 ## Credits [Acknowledgments]
 
 Images and photographs created by Me, Myself and I
-Font style created by Google Fonts [https://fonts.google.com/]
-Footer icons provided by Font Awesome [https://fontawesome.com/icons]
+Font style created by Google Fonts [ https://fonts.google.com/ ]
+Footer icons provided by Font Awesome [ https://fontawesome.com/icons ]
+
+Informations and tips:
+- Content made for the Django Community [ https://django.wtf/ ]
 ---
 ---
 
@@ -187,8 +195,6 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - Terminal: python3 -V  [ check the IDE Python version ]
 - Add a runtime.txt file to projects root directory, add line: 'python-3.12' [ IDE supported Python version ]
 - Heroku dashboard -> Settings tab -> Remove the DISABLE_COLLECTSTATIC key/value pair
-
-### 20-01 daily tasks
 - blog/urls.py -> new path for post_detail
 - index.html -> template's for-loop [ to display posts ] update the anchor element
 - blog/views.py -> add a 'post_detail' function-based view
@@ -197,5 +203,14 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - Create a new 'post_detail.html' file in the 'blog/templates/blog' directory & fill with the code
 - Terminal: python3 manage.py collectstatic [ collect the new static files to the staticfiles directory ]
 
+### 21-01 daily tasks
+- Create HTTP error page 400, 403, 404 & 500
+
 - **python3 manage.py runserver**
 - **DEBUG: False, git add, commit and push**
+
+<details>
+<summary>Responsive visual <b style="color: yellow;">(open here)</b></summary>
+<!-- Change code from ![Wireframe for site](assets/documentation/wireframe01.webp) -->
+<img src="assets/documentation/intro-responsive2.webp">
+</details>
