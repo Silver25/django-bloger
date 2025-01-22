@@ -206,10 +206,16 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - Create HTTP error page 400, 403, 404 & 500
 
 ### 22-01 daily tasks
-- 
+- Check if app About is setup properly!
 
 - **python3 manage.py runserver**
 - **DEBUG: False, git add, commit and push**
+
+**REGENERATE the 'SECRET_KEY' [settings.py] for final production deployment**
+- Terminal: **python -c 'import secrets; print(secrets.token_urlsafe(40))'**  [ prints lower, upper, numerical & special char ]
+or  
+- Terminal: **python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'**
+
 
 <details>
 <summary>Responsive visual <b style="color: yellow;">(open here)</b></summary>
