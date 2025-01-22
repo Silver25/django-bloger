@@ -1,6 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 {% load static %}
 
+<!-- views.py - set the name of the object as 'post', and now template can access its attributes -->
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
@@ -24,7 +25,12 @@
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text">
-                    {{ post.content | safe }}
+                    {{ post.content | safe }}  <!-- 'safe' keeps formating, NOT shoving html tags -->
+                    <!-- safe filter tells Django that this content is  safe to be interpreted as HTML.
+                     When you remove the safe filter, instead of rendering the HTML for us, Django displays 
+                     all of the HTML tags as well as the text. -->
+
+                    <!-- Django provides a host of filters that can be used in variables -->
                 </p>
             </div>
         </div>

@@ -86,6 +86,7 @@ Font style created by Google Fonts [ https://fonts.google.com/ ]
 Footer icons provided by Font Awesome [ https://fontawesome.com/icons ]
 
 Informations and tips:
+- Complete Basic Django Series [ https://djangotherightway.com/ ]
 - Content made for the Django Community [ https://django.wtf/ ]
 ---
 ---
@@ -202,9 +203,10 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - Create an 'images' directory in the existing static directory and upload the image for the post header
 - Create a new 'post_detail.html' file in the 'blog/templates/blog' directory & fill with the code
 - Terminal: python3 manage.py collectstatic [ collect the new static files to the staticfiles directory ]
-
-### 21-01 daily tasks
 - Create HTTP error page 400, 403, 404 & 500
+
+### 22-01 daily tasks
+- 
 
 - **python3 manage.py runserver**
 - **DEBUG: False, git add, commit and push**
