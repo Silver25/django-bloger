@@ -27,13 +27,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # regenerate the SECRET_KEY for final production deployment
 SECRET_KEY = 'django-insecure-cb7e9hraajv4d7rk30+%cmg6trx-qn9u!bzqem2@50&=(uk7^('
 
-# nke5jmdcm*-205*in6k_f_wkl)pip&(^m1x0bq2-dy0(6lt0fo
-
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # Allows for the extended, yellow error messages to be displayed 
 # in the process of development and testing.
-DEBUG = True
+DEBUG = False
 
 # Determines which host or server names the project can run on.
 ALLOWED_HOSTS = ['8000-silver25-djangobloger-5btwzguyq09.ws.codeinstitute-ide.net','.herokuapp.com']
