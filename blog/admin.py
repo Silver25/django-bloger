@@ -2,6 +2,9 @@ from django.contrib import admin
 from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
+
+# Important to register any app/model with Summernote
+# [ if SummerNote is installed for Admin panel ]
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 
