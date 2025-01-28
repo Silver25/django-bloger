@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+# Generic View for the function to create PostList
 from django.views import generic
 from .models import Post
 
@@ -7,7 +8,6 @@ from .models import Post
 # On the other hand, 'post' (with a lowercase p) refers to an individual blog post
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by("-created_on")
-    # template_name = "post_list.html"  DELETE <-
     template_name = "blog/index.html"
     paginate_by = 6  # number of post titles/excerpts to be displayed on page
 
