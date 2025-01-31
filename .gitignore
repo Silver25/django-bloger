@@ -3,7 +3,6 @@ core.mongo*
 core.python*
 env.py
 __pycache__/
-Notes.md
 *.py[cod]
 node_modules/
 .github/
