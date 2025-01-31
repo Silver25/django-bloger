@@ -204,3 +204,21 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - Create a new 'post_detail.html' file in the 'blog/templates/blog' directory & fill with the code
 - Terminal: python3 manage.py collectstatic [ collect the new static files to the staticfiles directory ]
 - Create HTTP error page 400, 403, 404 & 500
+- settings.py -> add app 'about', into INSTALLED_APPS
+- about/models.py -> class About(models.Model): ...
+- Terminal: python3 manage.py makemigrations
+- Terminal: python3 manage.py migrate
+- about/admin.py -> import model '@admin.register(About)' and the SummernoteModelAdmin
+- about/views.py -> add view queryset code 'def about_all(request):' = name will correlate with about/urls.py
+- **blog/views.py -> 'get_object_or_404' method to the import, function** - do I need those lines in every app???
+- templates/base.html -> create about_url variable [like the home_url] on top 
+- templates/base.html -> add a link <li> to the navigation section of base.html
+- in about app create templates/about directories
+- about/templates/about -> create about.html file and fill it with code
+- create a about/urls.py file and wire up view with a URL path
+- project/urls.py -> import 'about.urls' to the urlpatterns path with a URL called about/
+- static/images -> upload placeholder image for app/page about
+- Error: placeholder image doesn't display on page if settings.py DEBUG: False
+- **Heroku runs collectstatic, don't need to doing it on our own ??**
+- Terminal: python3 manage.py collectstatic
+- placeholder image displayed on about page
