@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure-cb7e9hraajv4d7rk30+%cmg6trx-qn9u!bzqem2@50&=(uk7^(
 DEBUG = False
 
 # Determines which host or server names the project can run on.
-ALLOWED_HOSTS = ['8000-silver25-djangobloger-5btwzguyq09.ws.codeinstitute-ide.net','.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com']
 
 
 # Application definition
@@ -100,7 +100,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.codeinstitute-ide.net/",
+    "https://localhost",
     "https://*.herokuapp.com"
 ]
 
