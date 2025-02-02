@@ -82,12 +82,15 @@ Heroku deployment
 ## Credits [Acknowledgments]
 
 Images and photographs created by Me, Myself and I
-Font style created by Google Fonts [ https://fonts.google.com/ ]
-Footer icons provided by Font Awesome [ https://fontawesome.com/icons ]
+Font style created by Google Fonts [https://fonts.google.com/]
+Footer icons provided by Font Awesome [https://fontawesome.com/icons]  
+
+Quillbot Fix grammar, spelling, and punctuation errors [https://quillbot.com/paraphrasing-tool]
+Humanize AI-generated content into natural, human-like text [https://www.humanizeai.pro/]
 
 Informations and tips:
-- Complete Basic Django Series [ https://djangotherightway.com/ ]
-- Content made for the Django Community [ https://django.wtf/ ]
+- Complete Basic Django Series [https://djangotherightway.com/]
+- Content made for the Django Community [https://django.wtf/]
 ---
 ---
 
