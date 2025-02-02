@@ -222,4 +222,5 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - **Heroku runs collectstatic, don't need to doing it on our own ??**
 - Terminal: python3 manage.py collectstatic
 - placeholder image displayed on about page
-- setup of the project on localhost - 127.0.0.1:8000 [ instead of Gitpod service ]
+- setup of the project on localhost - 127.0.0.1:8000 [ Lenovo, instead of Gitpod service ]
+- setup of the project on localhost - 127.0.0.1:8000 [ Dell, instead of Gitpod service ]
