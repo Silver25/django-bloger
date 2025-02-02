@@ -19,7 +19,7 @@
 ---
 ---
 
-**python3 manage.py runserver**  
+**python manage.py runserver**  
 **DEBUG: False, git add, commit and push**
   
   

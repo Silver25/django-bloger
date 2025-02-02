@@ -97,8 +97,8 @@ To run a frontend (HTML, CSS, Javascript only) application in Gitpod: **python3 
 
 To run a backend Python file, type **python3 app.py**.
 
-To run Django server, type: **python3 manage.py runserver**
-Dev server opens: https://8000-silver25-djangobloger-5btwzguyq09.ws.codeinstitute-ide.net/
+To run Django server, type: **python manage.py runserver**
+Dev server opens: 127.0.0.1:8000
 Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 
 
@@ -222,3 +222,4 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - **Heroku runs collectstatic, don't need to doing it on our own ??**
 - Terminal: python3 manage.py collectstatic
 - placeholder image displayed on about page
+- setup of the project on localhost - 127.0.0.1:8000 [ instead of Gitpod service ]
