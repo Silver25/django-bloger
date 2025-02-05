@@ -39,6 +39,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 # Application definition
 # Provides a list of applications that are enabled for this Django installation.
+# run migrations and migrate - after every new entry? HOW it's work??
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -50,16 +51,25 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'django_summernote',
     'hello_world',
     'about',
     'blog',
-    'django_summernote',
 ]
 
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+
+# constants set bootstrap5 as the allowed template pack and 
+# as the default template pack for project, already in base.html
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

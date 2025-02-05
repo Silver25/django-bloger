@@ -123,93 +123,93 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - settings.py -> adding the app to the file to connect the app to the project  [ INSTALLED_APPS list ]
 - Terminal: test/run app in browser  ![testing app in browser](readme-assets/image02.png)
 - Terminal: python3 manage.py startapp about  [ creating the app 'about' ]
-- Creating all necessary steps to activate and run app [ settings, urls, views ]
-- Test/run app in browser  ![applying app name in address bar](readme-assets/image03.png)
-- App can be seen if name of the app is applied on the end of the URL in address bar
-- Create new Heroku app, 'djangobloger'
+- creating all necessary steps to activate and run app [ settings, urls, views ]
+- test/run app in browser  ![applying app name in address bar](readme-assets/image03.png)
+- app can be seen if name of the app is applied on the end of the URL in address bar
+- create new Heroku app, 'djangobloger'
 - Terminal: install a production-ready webserver for Heroku: "pip3 install gunicorn~=20.1"
 - [ or for the last version: python -m pip install gunicorn]
 - Terminal: pip3 freeze --local > requirements.txt  [ add to requirements file ]
-- Create 'Procfile', with declaration command to execute Django project
+- create 'Procfile', with declaration command to execute Django project
 - settings.py -> add herokuapp.com to the ALLOWED_HOSTS list
-- Can't activate Heroku EcoDynos, NO such option ![Resources Tab without EcoDynos button](readme-assets/image04.png)
-- After few minutes, refresh/change tab and was activated ![EcoDynos displayed](readme-assets/image05.png)
+- can't activate Heroku EcoDynos, NO such option ![Resources Tab without EcoDynos button](readme-assets/image04.png)
+- after few minutes, refresh/change tab and was activated ![EcoDynos displayed](readme-assets/image05.png)
 - Terminal: pip3 install whitenoise~=6.5.0  [ Install Whitenoise package ]
 - Terminal: pip3 freeze --local > requirements.txt  [ update requirements file ]
 - GitHub, create new project [User stories] with issues as a part of my Repo
-- Start Blog walkthrough with new app = blog
+- start Blog walkthrough with new app = blog
 - Terminal: python manage.py startapp blog  [ creating the app 'blog' ]
 - settings.py -> add the new app to the list of installed apps in the file
 - blog/views.py -> add an import for HttpResponse in the file
 - blog/views.py -> add a function to return the text string "Hello, Blog!" in the file
 - my_project/urls.py -> import the appropriate views file and add the new path ‘blog/’
 - Terminal: test/run app in browser
-- Creating the Database [ PostgreSQL ] with CI manager
+- creating the Database [ PostgreSQL ] with CI manager
 - env.py -> connecting database to code with file, hold db URL
 - Install packages psycopg2 [ driver ] and dj-database-url for connection with db
 - project/settings.py -> import the appropriate packages
-- Comment out local sqlite3 database connection [ created as default on setup ]
+- comment out local sqlite3 database connection [ created as default on setup ]
 ![Installed packages and migration to connect database](readme-assets/image06.png)
 - Terminal: python3 manage.py createsuperuser
-- Create new class 'Post' with required dependencies in 'blog' app
+- create new class 'Post' with required dependencies in 'blog' app
 ![New class/model Post](readme-assets/image07.png)
-- Start the Django server, append /admin to the URL
+- start the Django server, append /admin to the URL
 ![Start Django Admin section](readme-assets/image08.png)
-- Created new Post in Django Admin - using +Add button
+- created new Post in Django Admin - using +Add button
 ![Django Admin - New Post created](readme-assets/image09.png)
-- Created new User in Django Admin - using +Add button
+- created new User in Django Admin - using +Add button
 ![Django Admin - New User added](readme-assets/image10.png)
-- Created new model class 'Comment' with all dependencies in 'blog' app [ how model field names looks in Django!! ]
+- created new model class 'Comment' with all dependencies in 'blog' app [ how model field names looks in Django!! ]
 ![Django Admin - Comment window example](readme-assets/image11.png)
-- Build homepage with Django generic views and remove old about and blog urls
+- build homepage with Django generic views and remove old about and blog urls
 ![Posts list with generic views](readme-assets/image12.png)
 - Terminal: pip3 install django-summernote~=0.8.20.0 [Summernote, a robust text editor for Admin]
-- Add django-summernote~=0.8.20.0 to requirements.txt file
+- add django-summernote~=0.8.20.0 to requirements.txt file
 - codestar/settings.py -> append 'django_summernote', to the INSTALLED_APPS
 - codestar/urls.py -> path('summernote/', include('django_summernote.urls')), to urlpatterns =
 - blog/admin.py -> import the class SummernoteModelAdmin
 - blog/admin.py -> add a class named PostAdmin
 - blog/admin.py -> add an @admin.register(Post) decorator above the PostAdmin class
 - blog/admin.py -> delete the existing Post model registration
-- Apply the migrations for the django_summernote app
+- apply the migrations for the django_summernote app
 - Terminal: python3 manage.py makemigrations
 - Terminal: python3 manage.py migrate
-- Run the Django server and open Admin area
-- Adding more posts with 'fixtures' - Set of pre-written data for a database in the same format
-- Blog app - create new folder 'fixtures' and inside file 'posts.json', paste source code
+- run the Django server and open Admin area
+- adding more posts with 'fixtures' - Set of pre-written data for a database in the same format
+- blog app - create new folder 'fixtures' and inside file 'posts.json', paste source code
 - Terminal: load the data to the database table with 'python3 manage.py loaddata posts'
-- Add blog/fixtures/ to the .gitignore file  
+- add blog/fixtures/ to the .gitignore file  
 - The base template and homepage
 - codestar/settings.py -> create a TEMPLATES_DIR constant
-- Add newly created TEMPLATES_DIR constant to the list of 'DIRS'
-- Add a new top-level 'templates' directory and inside new 'base.html' file, filled with code
-- Add a new index.html file to existing app-level blog/templates/blog directory
+- add newly created TEMPLATES_DIR constant to the list of 'DIRS'
+- add a new top-level 'templates' directory and inside new 'base.html' file, filled with code
+- add a new index.html file to existing app-level blog/templates/blog directory
 - blog/views.py -> replace the existing template_name with the new template_name
-- Delete the redundant 'post_list.html' template, as is replaced with the new 'index.html' template
-- Create a top-level 'static' directory with a 'css' directory within it, and a style.css file
+- delete the redundant 'post_list.html' template, as is replaced with the new 'index.html' template
+- create a top-level 'static' directory with a 'css' directory within it, and a style.css file
 - codestar/settings.py -> and build a path for our subdirectory static
 - base.html -> and load the static directory with {% load static %}
 - base.html -> add a link for custom CSS file
 ![Apply new custom CSS for posts](readme-assets/image13.png)
-- Apply new {% block copyright %} to base.html and index.html
-- Add variable excerpt in index.html and tag URL in base.html files
-- Add tag if statement for PREV post list button in index.html
+- apply new {% block copyright %} to base.html and index.html
+- add variable excerpt in index.html and tag URL in base.html files
+- add tag if statement for PREV post list button in index.html
 - Terminal: pip3 install whitenoise~=6.5.0
-- Add 'whitenoise.middleware.WhiteNoiseMiddleware', to settings.py
-- Create a staticfiles directory and collect the static files:
+- add 'whitenoise.middleware.WhiteNoiseMiddleware', to settings.py
+- create a staticfiles directory and collect the static files:
 - settings.py -> STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 - Terminal: python3 manage.py collectstatic  [ command create a staticfiles dir and fill it with static files ]
 - Terminal: python3 -V  [ check the IDE Python version ]
-- Add a runtime.txt file to projects root directory, add line: 'python-3.12' [ IDE supported Python version ]
+- add a runtime.txt file to projects root directory, add line: 'python-3.12' [ IDE supported Python version ]
 - Heroku dashboard -> Settings tab -> Remove the DISABLE_COLLECTSTATIC key/value pair
 - blog/urls.py -> new path for post_detail
 - index.html -> template's for-loop [ to display posts ] update the anchor element
 - blog/views.py -> add a 'post_detail' function-based view
 - blog/views.py -> add the 'get_object_or_404' method to the import
-- Create an 'images' directory in the existing static directory and upload the image for the post header
-- Create a new 'post_detail.html' file in the 'blog/templates/blog' directory & fill with the code
+- create an 'images' directory in the existing static directory and upload the image for the post header
+- create a new 'post_detail.html' file in the 'blog/templates/blog' directory & fill with the code
 - Terminal: python3 manage.py collectstatic [ collect the new static files to the staticfiles directory ]
-- Create HTTP error page 400, 403, 404 & 500
+- create HTTP error page 400, 403, 404 & 500
 - settings.py -> add app 'about', into INSTALLED_APPS
 - about/models.py -> class About(models.Model): ...
 - Terminal: python3 manage.py makemigrations
@@ -245,3 +245,7 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - Terminal: cp -r .venv/Lib/site-packages/allauth/templates/* ./templates/  [copy the allauth template files to 'templates']
 - templates/account/login.html -> replace the code with CI code
 - templates/account/logout.html -> replace the code with CI code
+- templates/account/signup.html get changed related to system
+- create some comments
+- blog/views.py -> add the code to the post_detail view - WATCH OUT for parenthesis {"post": post,}
+- blog/templates/blog/post_detail.html -> add code <!-- Displaying count of comments -->
