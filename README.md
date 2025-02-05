@@ -57,6 +57,9 @@ What colors, typography, and design elements will we use?
 ### Validator Testing
 
 ### Bugs and Issues
+- SyntaxError raised after adding a code for displaying comments  
+![Error raised after adding comments code](readme-assets/issue-image01.png)
+- Resolved the issue with enclosed parentheses around the code for the comment view.
 
 ## Deployment
 Heroku deployment
@@ -227,3 +230,18 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - placeholder image displayed on about page
 - setup of the project on localhost - 127.0.0.1:8000 [ Lenovo, instead of Gitpod service ]
 - setup of the project on localhost - 127.0.0.1:8000 [ Dell, instead of Gitpod service ]
+- Terminal: pip3 install django-allauth~=0.57.0  [Install the Allauth package]
+- Terminal: pip3 freeze --local > requirements.txt  [Add the django-allauth package to the requirements.txt file]
+- project/settings.py -> add the apps to INSTALLED_APPS
+- project/settings.py -> add the constants directly below the INSTALLED_APPS
+- project/settings.py -> append the command to the list of MIDDLEWARE
+- project/settings.py -> add: ACCOUNT_EMAIL_VERIFICATION = 'none' [below the AUTH_PASSWORD_VALIDATORS]
+- Terminal: python3 manage.py migrate  [only, just as with django_summernote do not need makemigrations]
+- project/urls.py -> include the path of accounts in the urlpatterns
+- base.html -> assign the new URLs to variables on the top
+- base.html -> add Logout, Register and Login links, with their template tags
+- Terminal: pip3 show django-allauth  [check the location of your django-allauth package files]
+- Location: "c:\CI_Project\django-bloger\.venv\Lib\site-packages"
+- Terminal: cp -r .venv/Lib/site-packages/allauth/templates/* ./templates/  [copy the allauth template files to 'templates']
+- templates/account/login.html -> replace the code with CI code
+- templates/account/logout.html -> replace the code with CI code

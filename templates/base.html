@@ -69,7 +69,17 @@
 
                 </ul>
                 <span class="navbar-text text-muted">
-                    &#9752; <!-- skull: &#9760; --> adventures of a SW Dev
+                     
+                    {% if user.is_authenticated %}
+                    &#9752; <!-- skull: &#9760; -->
+                    <span class="text-end m-3 fw-bold">Logged in as</span>
+                    an adventurer of a SW Dev
+                    {% else %}
+                    &#9752; <!-- skull: &#9760; -->
+                    <span class="text-end m-3 fw-bold">Not logged in as</span>
+                    an adventurer of a SW Dev
+                    {% endif %}
+                    
                 </span>
             </div>
         </div>
