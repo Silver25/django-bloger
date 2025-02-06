@@ -28,8 +28,13 @@ def post_detail(request, slug):
     """
     # pull only Published posts from db - models.py-STATUS=1
     queryset = Post.objects.filter(status=1)
+    # retrieves all the data for a single blog post from the Post model
     post = get_object_or_404(queryset, slug=slug)  # get data or raise a Http404 error
+    # retrieves all of the comments for the selected post in descending order
+    # related_name from the Comment model
     comments = post.comments.all().order_by("-created_on")
+    # variable to store retrieved count of the number of comments
+    # filter for approved comments on a post only
     comment_count = post.comments.filter(approved=True).count()
 
     if request.method == "POST":

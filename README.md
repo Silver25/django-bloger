@@ -249,3 +249,20 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - create some comments
 - blog/views.py -> add the code to the post_detail view - WATCH OUT for parenthesis {"post": post,}
 - blog/templates/blog/post_detail.html -> add code <!-- Displaying count of comments -->
+- Terminal: pip3 install django-crispy-forms~=2.0 [install the package]
+- Terminal: pip3 install crispy-bootstrap5~=0.7 [install the package]
+- Terminal: pip3 freeze --local > requirements.txt [add package to file]
+- project/settings.py -> add the crispy apps to INSTALLED_APPS
+- even app are added to INSTALLED_APPS there are no migrations files to migrate in this instance
+- codestar/settings.py, add the two constants
+- add a new forms.py file to the blog app
+- blog/forms.py -> add a form for comments into
+- blog/views.py -> import the Comment form on the top
+- blog/views.py -> post_detail view, create a variable comment_form, assign the class CommentForm()
+- blog/templates/blog/post_detail.html -> load the crispy forms DTL tags
+- post_detail.html -> add the comment form below the post and display comment loop
+- blog/views.py -> add the form functionality within the post_detail view
+- blog/views.py -> add an import for messages on the top
+- blog/views.py -> within the post_detail view, add the code to display a success message string
+- base.html > add the code to display Django messages
+- test writing and submiting comment as a logged-in user
