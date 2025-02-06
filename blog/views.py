@@ -54,7 +54,7 @@ def post_detail(request, slug):
             "post": post,  # set the name of the object
             "comments": comments,
             "comment_count": comment_count,  # set the number of the comments
-            "comment_form": comment_form,  # 
+            "comment_form": comment_form, 
         }
     )
     # context ("post") is how we pass data from our views to our templates
