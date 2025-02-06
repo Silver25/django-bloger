@@ -88,7 +88,8 @@
         <form id="commentForm" method="post"
           style="margin-top: 1.3em;">
           {{ comment_form | crispy }}
-          {% csrf_token %}
+          <!-- Django generates a unique CSRF token to send with POST request -->
+          {% csrf_token %}  <!-- tag needs to be added every time a form rendered -->
           <button id="submitButton" type="submit"
             class="btn btn-signup btn-lg">Submit</button>
         </form>
