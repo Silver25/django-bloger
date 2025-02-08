@@ -73,6 +73,12 @@
             This comment is awaiting approval
           </p>
           {% endif %}
+
+          <!-- This button should only be visible to logged in author of the comment -->
+          {% if user.is_authenticated and comment.author == user %}
+            <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+          {% endif %}
+          
         </div>
         <!-- Our for loop ends here -->
         {% endfor %}
@@ -102,5 +108,9 @@
   </div><!-- End of displaying comments -->
 
 </div>
-
 {% endblock content %}
+
+<!-- named it 'extras' to differentiate it from the 'content' block -->
+{% block extras %}
+<script src="{% static 'js/comments.js' %}"></script>
+{% endblock %}

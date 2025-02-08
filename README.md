@@ -266,3 +266,16 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - blog/views.py -> within the post_detail view, add the code to display a success message string
 - base.html > add the code to display Django messages
 - test writing and submiting comment as a logged-in user
+---
+- - **Views Part 3 - Challenge: Create the Collaboration Request form**
+- **_New Crispy Form on About page = Subscribe-footer or Contact form**
+- about/admin.py -> supplied code, copy-paste
+- about/models.py -> supplied code, copy-paste
+- about/templates/about/about_starter.html -> new file, supplied code, copy-paste
+- Terminal: python manage.py makemigrations
+- Terminal: python manage.py migrate
+- about/forms.py -> import and code
+- about/views.py -> import, function code
+- about/templates/about.html -> load tag on top, form in body
+- about/views.py -> import messages, function view
+- Admin panel -> write the collab msg
