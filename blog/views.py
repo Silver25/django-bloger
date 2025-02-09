@@ -75,11 +75,15 @@ def comment_edit(request, slug, comment_id):
     """
     if request.method == "POST":
 
+        # instance=comment, will applied any changes to the existing Comment,
+        # instead of creating a new one
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
 
+        # robust checks for authorship in views so that unauthorised
+        # or mistaken actions can be avoided
         if comment_form.is_valid() and comment.author == request.user:
             comment = comment_form.save(commit=False)
             comment.post = post
@@ -100,6 +104,8 @@ def comment_delete(request, slug, comment_id):
     post = get_object_or_404(queryset, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
 
+    # robust checks for authorship in views so that unauthorised
+    # or mistaken actions can be avoided
     if comment.author == request.user:
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')

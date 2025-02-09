@@ -279,3 +279,19 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - about/templates/about.html -> load tag on top, form in body
 - about/views.py -> import messages, function view
 - Admin panel -> write the collab msg
+- **_Editing and deleting records - CRUD**
+- blog/views.py -> add the imports on the top
+- blog/views.py -> add a new view 'comment_edit' at the bottom
+- blog/urls.py -> create a URL to point to new 'comment_edit' view
+- post_detail.html -> 'Edit' button code in template page
+- static/js/comments.js -> create JavaScript to construct the edit comment URL, making the button functional
+- post_detail.html -> add a DTL block with the script linking to the static/js/comments.js file
+- base.html -> add a block with the same name at the end of the body element
+- test with the login of user author of the comment that will be edited
+- blog/views.py -> add a new 'comment_delete' view
+- blog/urls.py -> add a urlpattern for new delete_comment view
+- post_detail.html -> add a Delete button above the Edit button
+- post_detail.html -> add a modal that opens on clicking Delete button for confirmation 
+- static/js/comments.js -> add the constant and variables for the modal and two Delete button elements
+- static/js/comments.js -> add the code below to construct the 'delete_comment' URL dynamically
+- test the new functionality by running the Django server and opening the browser
