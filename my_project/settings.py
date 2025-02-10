@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+# convert the database URL into a format that Django can use
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -25,7 +26,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # regenerate the SECRET_KEY for final production deployment
-SECRET_KEY = 'django-insecure-cb7e9hraajv4d7rk30+%cmg6trx-qn9u!bzqem2@50&=(uk7^('
+# HEROKU "SECRET_KEY": This doesn't have to be the same value as the one 
+# added in 'env.py'. It is considered good practice to have different ones.
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -117,6 +120,7 @@ WSGI_APPLICATION = 'my_project.wsgi.application'
 # }
 
 
+# get the value stored in the DATABASE_URL environment variable - env.py
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
