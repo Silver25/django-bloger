@@ -57,6 +57,8 @@ What colors, typography, and design elements will we use?
 ### Validator Testing
 
 ### Bugs and Issues
+- **When Admin Logout from Admin area - also disconnect registered User which one is logged in?**
+- **When User login and post comment - immediately Edit or Delete doesn't work?**
 - SyntaxError raised after adding a code for displaying comments  
 ![Error raised after adding comments code](readme-assets/issue-image01.png)
 - Resolved the issue with enclosed parentheses around the code for the comment view.
@@ -84,28 +86,10 @@ Heroku deployment
 
 ## Credits [Acknowledgments]
 
-Images and photographs created by Me, Myself and I
-Font style created by Google Fonts [https://fonts.google.com/]
-Footer icons provided by Font Awesome [https://fontawesome.com/icons]  
-
-Quillbot Fix grammar, spelling, and punctuation errors [https://quillbot.com/paraphrasing-tool]
-Humanize AI-generated content into natural, human-like text [https://www.humanizeai.pro/]
-
-Informations and tips:
-- Complete Basic Django Series [https://djangotherightway.com/]
-- Content made for the Django Community [https://django.wtf/]
+DEV Community [https://dev.to/search?utf8=%E2%9C%93&q=visual+studio+code]
+DEV Community [https://dev.to/search?utf8=%E2%9C%93&q=django]
 ---
 ---
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod: **python3 -m http.server**
-
-To run a backend Python file, type **python3 app.py**.
-
-To run Django server, type: **python manage.py runserver**
-Dev server opens: 127.0.0.1:8000
-Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 
 
 ## Release History
@@ -267,7 +251,6 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - base.html > add the code to display Django messages
 - test writing and submiting comment as a logged-in user
 ---
-- - **Views Part 3 - Challenge: Create the Collaboration Request form**
 - **_New Crispy Form on About page = Subscribe-footer or Contact form**
 - about/admin.py -> supplied code, copy-paste
 - about/models.py -> supplied code, copy-paste
@@ -295,3 +278,21 @@ Heroku live server: https://djangobloger-fb8dc7f4bd37.herokuapp.com/
 - static/js/comments.js -> add the constant and variables for the modal and two Delete button elements
 - static/js/comments.js -> add the code below to construct the 'delete_comment' URL dynamically
 - test the new functionality by running the Django server and opening the browser
+---
+- **_connect to the Cloudinary API_**
+- Terminal: pip3 install cloudinary~=1.36.0
+- Terminal: pip3 install dj3-cloudinary-storage~=0.0.6
+- Terminal: pip3 install urllib3~=1.26.15  [ powerful, user-friendly HTTP client for Python ]
+- Terminal: pip3 freeze --local > requirements.txt
+- sign up for Cloudinary.com
+- in the Cloudinary dashboard, open 'API Keys' and copy the CLOUDINARY_URL
+- env.py -> os.environ.setdefault("CLOUDINARY_URL", "API URL copied from Cloudinary")
+- env.py -> delete the CLOUDINARY_URL= from the start of the URL string
+- codestar/settings.py -> add the 'cloudinary', ... apps to INSTALLED_APPS
+- blog/models.py -> import the CloudinaryField from the 'cloudinary/models.py' file
+- blog/models.py -> add a new field 'featured_image' to the Post model to store an image for each post
+- Terminal: python manage.py makemigrations [as a new model field is added, create a new migrations file]
+- Terminal: python manage.py migrate [the new blog migrations file make the changes to the database schema]
+- blog/templates/blog/index.html -> add the if DTL loop code inside DIV class="image-container"
+- index.html -> load tag for static in the template
+- Heroku -> Reveal config vars -> add a CLOUDINARY_URL key:value pair from the env.py file

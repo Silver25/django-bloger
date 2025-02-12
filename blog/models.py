@@ -13,6 +13,9 @@ class Post(models.Model):
         on_delete=models.CASCADE,
         related_name="blog_posts"
 )
+    # class allows users to upload media to a database model powered by
+    # Cloudinary, ensures that image isn't stored in database,
+    # but instead sent over to Cloudinary, saving just URL to database
     featured_image = CloudinaryField('image', default='placeholder')
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)

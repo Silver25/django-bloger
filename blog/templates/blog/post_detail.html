@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
-{% block content %}
 {% load static %}
 {% load crispy_forms_tags %}
+
+{% block content %}
 
 <!-- views.py - set the name of the object as 'post', and now template can access its attributes -->
 <div class="masthead">
@@ -14,7 +15,11 @@
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">    <!-- link to the static image as a post header -->
+              {% if "placeholder" in post.featured_image.url %}
+                <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder image">  <!-- link to the static image as a post header -->
+                {% else %}
+                <img src="{{ post.featured_image.url }}" class="scale" alt="{{ post.title }}">  <!-- the user-generated image stored on Cloudinary is shown -->>
+              {% endif %}
             </div>
         </div>
     </div>
@@ -28,7 +33,7 @@
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text">
                     {{ post.content | safe }}  <!-- 'safe' keeps formating, NOT shoving html tags -->
-                    <!-- safe filter tells Django that this content is  safe to be interpreted as HTML.
+                    <!-- safe filter tells Django that this content is safe to be interpreted as HTML.
                      When you remove the safe filter, instead of rendering the HTML for us, Django displays 
                      all of the HTML tags as well as the text. -->
 
