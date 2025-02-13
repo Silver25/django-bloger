@@ -159,6 +159,8 @@ USE_I18N = True
 
 USE_TZ = True
 
+# dictionary with the message type as a key
+# and the Bootstrap class as the value for styling
 MESSAGE_TAGS = {
     messages.SUCCESS: 'alert-success',
     messages.ERROR: 'alert-danger',
