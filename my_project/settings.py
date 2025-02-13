@@ -36,7 +36,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 # Allows for the extended, yellow error messages to be displayed 
 # in the process of development and testing.
-DEBUG = True
+DEBUG = False
 
 # Determines which host or server names the project can run on.
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
@@ -113,6 +113,13 @@ WSGI_APPLICATION = 'my_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 # get the value stored in the DATABASE_URL environment variable - env.py
 DATABASES = {
