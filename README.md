@@ -296,3 +296,11 @@ DEV Community [https://dev.to/search?utf8=%E2%9C%93&q=django]
 - blog/templates/blog/index.html -> add the if DTL loop code inside DIV class="image-container"
 - index.html -> load tag for static in the template
 - Heroku -> Reveal config vars -> add a CLOUDINARY_URL key:value pair from the env.py file
+---
+- **_Storing user-generated images_**
+- In the admin panel, open the edit page for the blog post
+- a new option for Post: a featured image. Upload an image and Save post.
+- post_detail.html -> update code for the 'placeholder' image
+- about/models.py -> add a new profile_image field using the CloudinaryFIeld class
+- Terminal: run migrations after making the change to the model
+- about.html -> set the template logic to display the existing nobody.jpg image if the default value is found. If not, display the uploaded profile image
