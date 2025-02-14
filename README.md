@@ -40,13 +40,25 @@ What colors, typography, and design elements will we use?
 
 ### Wireframes
 
-- Database Schema - Entity Relationship Diagram
+- Database Schema - Entity Relationship Diagram [Generate Entity-Relationship diagrams for visual database design.]
+  - To effectively generate database diagrams for PostgreSQL:
+
+- DbSchema supports PostgreSQL and Community Edition offers a fantastic starting point
+- pgAdmin is a widely used open-source administration and development platform
+- DBeaver is a free, multi-platform database tool that supports PostgreSQL
+- Navicat Premium Lite
+- HeidiSQL is a lightweight, fast, and open-source tool for managing SQL Server databases.
+- MySQL Workbench is the tool for developers working with MySQL databases.
+- SQL Power Architect is a data modeling tool geared towards database architects
+- DbVisualizer not provide diagramming or ER (Entity-Relationship) visualization features in its free edition.
 
 ### Colour Scheme
 
 ### Typography [Fonts]
 
 ## Features
+
+- A custom 404 error page has been implemented to enhance the user experience when a page is not found. This page maintains the site's design and provides guidance to help users navigate back to valid sections of the website.
 
 ### Future Features
 
