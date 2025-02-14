@@ -6,9 +6,7 @@
 
 ## Description [Interactive Responsive Website]
 
-## UX Design
-Proposed by Jesse James Garrett, this process is represented as five levels of activity called planes.  
-These planes and their concerns are as follows.
+## UX [User Experience]
 
 ### Target audience
 
@@ -42,9 +40,11 @@ What colors, typography, and design elements will we use?
 
 ### Wireframes
 
+- Database Schema - Entity Relationship Diagram
+
 ### Colour Scheme
 
-### Typography
+### Typography [Fonts]
 
 ## Features
 
@@ -54,7 +54,26 @@ What colors, typography, and design elements will we use?
 
 ### Manual Testing
 
+- User Input/Form Validation
+ - Navbar
+ - Django messages
+ - Register Page
+ - Login Page
+ - Logout Page
+ - Comment Form
+ - Edit Comment
+ - Delete Comment
+- Browser Compatibility
+- Testing User Stories
+- Responsive - Dev Tools
+
 ### Validator Testing
+
+- https://validator.w3.org/ -> navigated to each page -> page source -> paste into the 'validate by input'
+- https://jshint.com/ -> Comments.js
+- https://pep8ci.herokuapp.com/
+- Lighthouse in Incognito mode
+- Wave [https://wave.webaim.org/)] is a suite of evaluation tools that helps authors make their web content more accessible to individuals with disabilities.
 
 ### Bugs and Issues
 - **When Admin Logout from Admin area - also disconnect registered User which one is logged in?**
@@ -64,18 +83,17 @@ What colors, typography, and design elements will we use?
 - Resolved the issue with enclosed parentheses around the code for the comment view.
 
 ## Deployment
-Heroku deployment
-- Front page -> Create new app
-- App name + Europe -> Create app
-- Dashboard -> Settings tab
-- _Config Vars_ called `PORT`. Set this to `8000`
-- Config Vars -> Reveal Config Vars -> CREDS + creds.json code
-- Buildpacks -> Add buildpack -> Python + Node.js
-- Deploy tab -> Deployment method -> GitHub -> Connect to GitHub -> Authorize Heroku
-  -> Popup window -> Sign in to GitHub -> Search for gitHub project
-- Manual deploy -> Deploy a GitHub branch -> Deploy Branch button
-- Receive code from GitHub -> Build main ...
-- Your app was successfully deployed. -> View button
+- Connecting to Github
+- Install Django
+- Creating an App
+- Create Necessary Folders
+- Prerequisites Before Deploying to Heroku
+- Database Setup (PostgreSQL)
+- Cloudinary
+- Deploying to Heroku
+- IDE Workspace
+- Clone Repo
+- 
 
 ## Technologies
 
