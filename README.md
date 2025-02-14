@@ -62,6 +62,8 @@ What colors, typography, and design elements will we use?
 
 ### Future Features
 
+- Registered User with restricted access to Admin area to edit own posts/profiles
+
 ## Testing
 
 ### Manual Testing
@@ -113,6 +115,11 @@ What colors, typography, and design elements will we use?
 - Gitpod
 - Github
 - Google Apps
+
+## Tools
+- dbdiagram, free, simple tool to draw database diagrams (ERDs) by typing DSL code [https://dbdiagram.io/d]
+- Visual Paradigm's online ERD software [https://online.visual-paradigm.com/diagrams/features/erd-tool/]
+- Free AI ERD Diagram Maker [https://www.mymap.ai/er-diagram-tool]
 
 ## Credits [Acknowledgments]
 
