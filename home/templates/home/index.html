@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+
+    <!-- Hero -->
+        <div class="p-5 text-center bg-image rounded-3" style="background-image: url('static/images/art-hero.webp'); height: 600px;">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                        <h1 class="mb-3">Introducing Neurographic Art</h1>
+                        <h4 class="mb-3">We celebrate the fusion of the old and the new!</h4>
+                        <a data-mdb-ripple-init class="btn btn-outline-light btn-lg" href="{% url 'about' %}" role="button">Read more >></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Hero -->
+
+    <header class="p-5 jumbotron text-center">
+        <p class="lead">
+            Welcome to the captivating world of neurographical art, where creativity and mindfulness converge to unlock the 
+            boundless potential within each of us. Whether you're an experienced artist or someone new to artistic expression, 
+            neurographical art offers a transformative journey of self-discovery and healing through the use of intuitive lines, 
+            shapes, and patterns. Our community celebrates the beauty of individuality and the power of art to connect us all. 
+            Dive into our resources, workshops, and inspiring galleries to embark on your own creative adventure. 
+            Here, every line you draw is a step towards a more vibrant and fulfilling life. Let your imagination flow and discover the magic of neurographical art today.
+        </p>
+    </header>
+
+    <section class="container text-center">
+        Join our newsletter for updates!
+        <form method="post">
+            <!-- render the form using the Crispy filter -->
+            {{ newsletter_form | crispy }}
+            <!-- CSRF token tag inside the form for the security -->
+            {% csrf_token %}
+            <button class="btn btn-secondary" type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    </div>
+</div>
+
+{% endblock content %}
+
+<!--
+<form action="{% url 'subscribe' %}" method="post" class="form-inline justify-content-center">
+    {% csrf_token %}
+    <div class="form-group mb-2">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required> 
+        <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+    </div>
+</form>
+-->
